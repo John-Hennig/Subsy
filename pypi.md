@@ -1,5 +1,4 @@
-﻿# Subsy
-*Access to subtitles from various file formats*
+﻿*Access to subtitles from various file formats*
 
 This library is not fundamentally different from established ones, but
 offers some helpful abstractions that those others don't. First and
@@ -29,4 +28,3 @@ Subtitles can be loaded from and saved to these file formats:
 * SubViewer (`.sub`)
 
 [![license](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![source](https://img.shields.io/github/stars/John-Hennig/Subsy?style=social)](https://github.com/John-Hennig/Subsy)
