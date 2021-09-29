@@ -31,5 +31,6 @@ Subtitles can be loaded from and saved to these file formats:
 [![license](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![release](https://img.shields.io/pypi/v/subsy.svg)](https://pypi.python.org/pypi/subsy)
 [![downloads](https://pepy.tech/badge/subsy)](https://pepy.tech/project/subsy)
+[![build](https://app.travis-ci.com/John-Hennig/Subsy.svg?branch=main)](https://app.travis-ci.com/John-Hennig/Subsy)
 ![coverage](tests/coverage.svg?raw=true)
 [![documentation](https://readthedocs.org/projects/subsy/badge/?version=latest)](https://subsy.readthedocs.io/en/latest)
