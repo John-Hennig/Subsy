@@ -1,0 +1,150 @@
+﻿[INFORMATION]
+[TITLE]
+[AUTHOR]
+[SOURCE]
+[PRG]
+[FILEPATH]
+[DELAY]0
+[CD TRACK]0
+[COMMENT]
+[END INFORMATION]
+[SUBTITLE]
+[COLF]&HFFFFFF,[STYLE]bd,[SIZE]18,[FONT]Sans
+
+00:00:00.00,00:00:01.23
+Just a single line of text.
+
+00:00:02.00,00:00:02.90
+Text extending over[br]two lines.
+
+00:00:03.00,00:00:03.90
+Text extending[br]over[br]three lines.
+
+00:00:04.00,00:00:04.90
+Line does not end with a period
+
+00:00:05.00,00:00:05.90
+because the sentence continues.
+
+00:00:10.00,00:00:10.90
+...line starting with dot-dot-dot.
+
+00:00:11.00,00:00:11.90
+…line starting with ellipsis.
+
+00:00:12.00,00:00:12.90
+Line ending with dot-dot-dot...
+
+00:00:13.00,00:00:13.90
+Line ending with ellipsis…
+
+00:00:14.00,00:00:14.90
+Line ending with four dots....
+
+00:00:15.00,00:00:15.90
+Line ending with ellipsis and a dot.
+
+00:00:16.00,00:00:16.90
+Line that has: a colon.
+
+00:00:17.00,00:00:17.90
+Line ends with number 1
+
+00:00:18.00,00:00:18.90
+1 number starts the line
+
+00:00:20.00,00:00:20.90
+<i>Entire line in italics.</i>
+
+00:00:21.00,00:00:21.90
+Only <i>part of line</i> in italics.
+
+00:00:22.00,00:00:22.90
+<i>Two lines of text,</i>[br]<i>separately in italics.</i>
+
+00:00:23.00,00:00:23.90
+<i>Italics extending over[br]multiple lines.</i>
+
+00:00:30.00,00:00:30.90
+- Dialog marked with minus sign.[br]- Different speaker.
+
+00:00:31.00,00:00:31.90
+– Dialog marked with en-dash.[br]– Different speaker.
+
+00:00:32.00,00:00:32.90
+— Dialog marked with em-dash.[br]— Different speaker.
+
+00:00:33.00,00:00:33.90
+- <i>Dialog line in italics.</i>[br]- Or <i>part</i> of it.
+
+00:00:34.00,00:00:34.90
+– <i>First line in italics.</i>[br]– Second not.
+
+00:00:35.00,00:00:35.90
+— First line regular.[br]— <i>Second in italics.</i>
+
+00:00:40.00,00:00:40.90
+♪ Song lyrics ♪
+
+00:00:41.00,00:00:41.90
+♪ <i>Lyrics in italics</i> ♪
+
+00:00:42.00,00:00:42.90
+♪ Lyrics <i>partly</i> in italics ♪
+
+00:00:43.00,00:00:43.90
+♪ Lyrics on two ♪[br]♪ separate lines ♪
+
+00:00:44.00,00:00:44.90
+♪ Lyrics extending over[br]two lines ♪
+
+00:00:45.00,00:00:45.90
+♪ – Dialog with en-dash ♪[br]♪ – Second singer ♪
+
+00:00:46.00,00:00:46.90
+♪ — Dialog with em-dash ♪[br]♪ — Second singer ♪
+
+00:00:50.00,00:00:50.90
+SPEAKER: Just a single line.
+
+00:00:51.00,00:00:51.90
+SPEAKER: Text extending[br]over two lines.
+
+00:00:52.00,00:00:52.90
+SPEAKER: But line has: a colon.
+
+00:00:53.00,00:00:53.90
+SPEAKER: But first line:[br]ends with a colon.
+
+00:00:54.00,00:00:54.90
+SPEAKER: <i>Text in italics.</i>
+
+00:00:55.00,00:00:55.90
+SPEAKER: <i>Two lines[br]in italics.</i>
+
+00:00:56.00,00:00:56.90
+SPEAKER: <i>Two lines</i>[br]<i>separately in italics.</i>
+
+00:01:00.00,00:01:00.90
+PAUL: Speaker 1 says.[br]MARY: Speaker 2 says.
+
+00:01:01.00,00:01:01.90
+PAUL: Is on-screen.[br]MARY: <i>Is off-screen.</i>
+
+00:01:02.00,00:01:02.90
+PAUL: Says something[br]MARY: Emphasizes <i>this</i> word.
+
+00:01:03.00,00:01:03.90
+PAUL & MARY: Two people speak.
+
+00:01:04.00,00:01:04.90
+PAUL & MARY:[br]Two people speak on new line.
+
+00:01:05.00,00:01:05.90
+SPEAKER: Says off-screen.[br]- On-screen person replies.
+
+00:01:06.00,00:01:06.90
+someone continues.[br]SPEAKER: New person says.
+
+00:01:07.00,00:01:07.90
+- Person speaks on-screen.[br]SPEAKER: Replies off-screen.

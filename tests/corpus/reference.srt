@@ -1,0 +1,209 @@
+﻿1
+00:00:00,000 --> 00:00:01,234
+Just a single line of text.
+
+2
+00:00:02,000 --> 00:00:02,900
+Text extending over
+two lines.
+
+3
+00:00:03,000 --> 00:00:03,900
+Text extending
+over
+three lines.
+
+4
+00:00:04,000 --> 00:00:04,900
+Line does not end with a period
+
+5
+00:00:05,000 --> 00:00:05,900
+because the sentence continues.
+
+6
+00:00:10,000 --> 00:00:10,900
+...line starting with dot-dot-dot.
+
+7
+00:00:11,000 --> 00:00:11,900
+…line starting with ellipsis.
+
+8
+00:00:12,000 --> 00:00:12,900
+Line ending with dot-dot-dot...
+
+9
+00:00:13,000 --> 00:00:13,900
+Line ending with ellipsis…
+
+10
+00:00:14,000 --> 00:00:14,900
+Line ending with four dots....
+
+11
+00:00:15,000 --> 00:00:15,900
+Line ending with ellipsis and a dot.
+
+12
+00:00:16,000 --> 00:00:16,900
+Line that has: a colon.
+
+13
+00:00:17,000 --> 00:00:17,900
+Line ends with number 1
+
+14
+00:00:18,000 --> 00:00:18,900
+1 number starts the line
+
+15
+00:00:20,000 --> 00:00:20,900
+<i>Entire line in italics.</i>
+
+16
+00:00:21,000 --> 00:00:21,900
+Only <i>part of line</i> in italics.
+
+17
+00:00:22,000 --> 00:00:22,900
+<i>Two lines of text,</i>
+<i>separately in italics.</i>
+
+18
+00:00:23,000 --> 00:00:23,900
+<i>Italics extending over
+multiple lines.</i>
+
+19
+00:00:30,000 --> 00:00:30,900
+- Dialog marked with minus sign.
+- Different speaker.
+
+20
+00:00:31,000 --> 00:00:31,900
+– Dialog marked with en-dash.
+– Different speaker.
+
+21
+00:00:32,000 --> 00:00:32,900
+— Dialog marked with em-dash.
+— Different speaker.
+
+22
+00:00:33,000 --> 00:00:33,900
+- <i>Dialog line in italics.</i>
+- Or <i>part</i> of it.
+
+23
+00:00:34,000 --> 00:00:34,900
+– <i>First line in italics.</i>
+– Second not.
+
+24
+00:00:35,000 --> 00:00:35,900
+— First line regular.
+— <i>Second in italics.</i>
+
+25
+00:00:40,000 --> 00:00:40,900
+♪ Song lyrics ♪
+
+26
+00:00:41,000 --> 00:00:41,900
+♪ <i>Lyrics in italics</i> ♪
+
+27
+00:00:42,000 --> 00:00:42,900
+♪ Lyrics <i>partly</i> in italics ♪
+
+28
+00:00:43,000 --> 00:00:43,900
+♪ Lyrics on two ♪
+♪ separate lines ♪
+
+29
+00:00:44,000 --> 00:00:44,900
+♪ Lyrics extending over
+two lines ♪
+
+30
+00:00:45,000 --> 00:00:45,900
+♪ – Dialog with en-dash ♪
+♪ – Second singer ♪
+
+31
+00:00:46,000 --> 00:00:46,900
+♪ — Dialog with em-dash ♪
+♪ — Second singer ♪
+
+32
+00:00:50,000 --> 00:00:50,900
+SPEAKER: Just a single line.
+
+33
+00:00:51,000 --> 00:00:51,900
+SPEAKER: Text extending
+over two lines.
+
+34
+00:00:52,000 --> 00:00:52,900
+SPEAKER: But line has: a colon.
+
+35
+00:00:53,000 --> 00:00:53,900
+SPEAKER: But first line:
+ends with a colon.
+
+36
+00:00:54,000 --> 00:00:54,900
+SPEAKER: <i>Text in italics.</i>
+
+37
+00:00:55,000 --> 00:00:55,900
+SPEAKER: <i>Two lines
+in italics.</i>
+
+38
+00:00:56,000 --> 00:00:56,900
+SPEAKER: <i>Two lines</i>
+<i>separately in italics.</i>
+
+39
+00:01:00,000 --> 00:01:00,900
+PAUL: Speaker 1 says.
+MARY: Speaker 2 says.
+
+40
+00:01:01,000 --> 00:01:01,900
+PAUL: Is on-screen.
+MARY: <i>Is off-screen.</i>
+
+41
+00:01:02,000 --> 00:01:02,900
+PAUL: Says something
+MARY: Emphasizes <i>this</i> word.
+
+42
+00:01:03,000 --> 00:01:03,900
+PAUL & MARY: Two people speak.
+
+43
+00:01:04,000 --> 00:01:04,900
+PAUL & MARY:
+Two people speak on new line.
+
+44
+00:01:05,000 --> 00:01:05,900
+SPEAKER: Says off-screen.
+- On-screen person replies.
+
+45
+00:01:06,000 --> 00:01:06,900
+someone continues.
+SPEAKER: New person says.
+
+46
+00:01:07,000 --> 00:01:07,900
+- Person speaks on-screen.
+SPEAKER: Replies off-screen.

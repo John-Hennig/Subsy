@@ -1,0 +1,109 @@
+﻿"""
+Configuration file for rendering the documentation.
+
+This folder contains the documentation source files that are to be
+rendered as a static web site by the documentation generator Sphinx.
+The rendering process is configured by this very script and would be
+triggered when running  `sphinx-build . output` on the command line.
+The rendered HTML then ends up in the `output` folder, wherein
+`index.html` is the start page.
+
+The documentation source comprises the `.md` files here, of which
+`index.md` maps to the start page, as well as the doc-strings in the
+package's source code for the API documentation. The Markdown parser
+for `.md` files is MyST. For doc-strings it is CommonMark, which
+supports basic text formating, but no advanced features such as cross
+references.
+"""
+
+
+########################################
+# Dependencies                         #
+########################################
+
+import commonmark                      # Markdown parser
+from unittest.mock import Mock         # mock imports
+import sys                             # system specifics
+from pathlib import Path               # file-system path
+
+extensions = [
+    'myst_parser',                     # Accept Markdown as input.
+    'sphinx.ext.autodoc',              # Get documentation from doc-strings.
+    'sphinx.ext.autosummary',          # Create summaries automatically.
+    'sphinx.ext.viewcode',             # Add links to highlighted source code.
+]
+
+# Add the project folder to the module search path.
+main = Path(__file__).absolute().parent.parent
+sys.path.insert(0, str(main))
+
+# Mock external dependencies so they are not required at build time.
+sys.modules['srt'] = Mock()
+sys.modules['aeidon'] = Mock()
+# Mocking the chardet package doesn't seem to work.
+# Which is why it is required to be installed.
+
+# Make package meta data available.
+from subsy import meta
+
+
+########################################
+# Doc-strings                          #
+########################################
+
+def docstring(app, what, name, obj, options, lines):
+    """Converts doc-strings from (CommonMark) Markdown to reStructuredText."""
+    md  = '\n'.join(lines)
+    ast = commonmark.Parser().parse(md)
+    rst = commonmark.ReStructuredTextRenderer().render(ast)
+    lines.clear()
+    lines += rst.splitlines()
+
+
+def setup(app):
+    """Sets up customized text processing."""
+    app.connect('autodoc-process-docstring', docstring)
+
+
+########################################
+# Configuration                        #
+########################################
+
+# Meta information
+project   = meta.title
+version   = meta.version
+release   = meta.version
+date      = meta.date
+author    = meta.author
+copyright = meta.copyright
+license   = meta.license
+
+# Logo
+html_logo    = 'images/icon-96px.png'  # documentation logo
+html_favicon = 'images/icon-256px.png' # browser icon
+
+# Source parsing
+master_doc = 'index'                   # start page
+nitpicky   = True                      # Warn about missing references?
+
+# Code documentation
+autodoc_default_options = {
+    'members':       True,             # Include module/class members.
+    'member-order': 'bysource',        # Order members as in source file.
+}
+autosummary_generate = False           # Stub files are created by hand.
+add_module_names = False               # Don't prefix members with module name.
+
+# Rendering options
+myst_heading_anchors = 2               # Generate link anchors for sections.
+html_copy_source     = False           # Copy documentation source files?
+html_show_copyright  = False           # Show copyright notice in footer?
+html_show_sphinx     = False           # Show Sphinx blurb in footer?
+
+# Rendering style
+html_theme          = 'furo'           # custom theme with light and dark mode
+pygments_style      = 'friendly'       # syntax highlight style in light mode
+pygments_dark_style = 'stata-dark'     # syntax highlight style in dark mode
+templates_path      = ['templates']    # style template overrides
+html_static_path    = ['style']        # folders to include in output
+html_css_files      = ['custom.css']   # extra style files to apply

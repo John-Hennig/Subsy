@@ -1,0 +1,5 @@
+sphinx>=2.1
+furo
+myst-parser
+commonmark
+chardet
