@@ -1,0 +1,3 @@
+srt3
+aeidon
+chardet
