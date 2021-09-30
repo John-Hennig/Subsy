@@ -42,7 +42,7 @@ The text encoding of input files is detected automatically.
 
 ----
 
-# CI/CD
+# Continuous integration
 
 I published this library mostly to use as a demo project for continuous
 integration, for me to learn how to set up and configure the various CI
@@ -60,3 +60,6 @@ major platforms: Linux, Windows, macOS.
 [![CircleCI](
     https://img.shields.io/circleci/build/github/John-Hennig/Subsy?label=CircleCI)](
     https://circleci.com/gh/John-Hennig/Subsy)
+[![GitHub](
+    https://img.shields.io/github/workflow/status/John-Hennig/Subsy/Test%20commit?label=GitHub)](
+    https://github.com/John-Hennig/Subsy/actions/workflows/test_commit.yml)
