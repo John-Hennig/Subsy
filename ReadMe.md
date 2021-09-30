@@ -66,3 +66,6 @@ major platforms: Linux, Windows, macOS.
 [![Buddy](
     https://app.buddy.works/jhen/subsy/pipelines/pipeline/351304/badge.svg?token=09080438c2a13e8c074ec45e5dc023682ae8c8e825ef8b6e8616aa8ee8ab2dfe)](
     https://app.buddy.works/jhen/subsy/pipelines/pipeline/351304)
+[![Buddy](
+    https://img.shields.io/appveyor/build/John-Hennig/Subsy?label=AppVeyor)](
+    https://ci.appveyor.com/project/John-Hennig/subsy)
