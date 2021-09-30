@@ -31,7 +31,6 @@ def detect_encoding(file):
     rename = {
         'utf-8':        'UTF-8',
         'UTF-8-SIG':    'UTF-8-sig',
-        'Windows-1252': 'ANSI'
     }
     if encoding in rename:
         encoding = rename[encoding]
