@@ -1,0 +1,86 @@
+# The configuration file is written in YAML.
+# See: https://circleci.com/docs/2.0/writing-yaml
+
+version: 2.1
+# Use the (latest) 2.1 version of CircleCI pipeline process engine.
+# See: https://circleci.com/docs/2.0/configuration-reference
+
+
+jobs:
+# Define jobs to be invoked later in a workflow.
+# See: https://circleci.com/docs/2.0/configuration-reference/#jobs
+
+    test_Linux_Python36: &test_template
+    # This job is to run the test suite with Python 3.6 on Linux. So we gave
+    # it a name that reflects that.
+    # We also save everything we define here in a template, just so we don't
+    # have to repeat ourselves further down when we do essentially the same,
+    # only for other Python/OS environments. Defining that environment is
+    # what we need to do first.
+        docker:
+        # This line requests a Docker executor. An executor basically defines
+        # the operating system running on the virtual machine that executes
+        # the job. We could request a Linux virtual machine with "machine",
+        # but the "docker" executor is more lightweight (thanks to the Docker
+        # technology) and therefore spins up faster.
+        # See: https://circleci.com/docs/2.0/executor-types
+            - image: cimg/python:3.6
+            # Docker also makes it easy to set up common configurations on
+            # the virtual machine by loading pre-defined Docker images.
+            # We could use Docker containers from anywhere, for example from
+            # Docker Hub. Here we are using one provided by Circle CI itself.
+            # See: https://circleci.com/developer/images
+            # This image adds a Python installation to the basic Ubuntu OS.
+            # The specific Python version is selected via an image tag.
+            # See: https://circleci.com/developer/images/image/cimg/python
+        steps:
+        # With the environment specified, we can now run the job step by step.
+            - checkout
+            # Check out the code explicitly as the first step.
+            - run:
+                name: Update pip.
+                command: pip install --upgrade pip
+            # Use latest pip version when building/installing the package.
+            - run:
+                name: Install package.
+                command: pip install .[test]
+            # Install our package plus extra dependencies needed for testing.
+            - run:
+                name: Run tests.
+                command: pytest
+            # And finally run the tests.
+
+
+    test_Linux_Python37:
+    # This job does the same as the first one, only with Python 3.7.
+        <<: *test_template
+        # So we can just load the template we've defined above. This way we
+        # only have to override the configuration entries that are different
+        # this time. Namely, that's the environment. The executing steps of
+        # the job will be exactly the same.
+        docker:
+            - image: cimg/python:3.7
+
+    test_Linux_Python38:
+        <<: *test_template
+        docker:
+            - image: cimg/python:3.8
+
+    test_Linux_Python39:
+        <<: *test_template
+        docker:
+            - image: cimg/python:3.8
+
+
+workflows:
+# Invoke jobs via workflows.
+# See: https://circleci.com/docs/2.0/configuration-reference/#workflows
+
+    test_multiple_environments:
+    # This is our custom workflow, it should have a descriptive name.
+        jobs:
+        # List the jobs to run. They will usually run in parallel.
+            - test_Linux_Python36
+            - test_Linux_Python37
+            - test_Linux_Python38
+            - test_Linux_Python39
