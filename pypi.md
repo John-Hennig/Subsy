@@ -27,4 +27,8 @@ Subtitles can be loaded from and saved to these file formats:
 * WebVTT (`.vtt`)
 * SubViewer (`.sub`)
 
-[![license](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+The text encoding of input files is detected automatically.
+
+[![license](
+    https://img.shields.io/badge/License-MIT-green.svg)](
+    https://github.com/John-Hennig/Subsy/blob/main/license.txt)

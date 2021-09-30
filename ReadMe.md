@@ -28,9 +28,35 @@ Subtitles can be loaded from and saved to these file formats:
 * WebVTT (`.vtt`)
 * SubViewer (`.sub`)
 
-[![license](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![release](https://img.shields.io/pypi/v/subsy.svg)](https://pypi.python.org/pypi/subsy)
-[![downloads](https://pepy.tech/badge/subsy)](https://pepy.tech/project/subsy)
-[![build](https://app.travis-ci.com/John-Hennig/Subsy.svg?branch=main)](https://app.travis-ci.com/John-Hennig/Subsy)
+The text encoding of input files is detected automatically.
+
+[![documentation](
+    https://readthedocs.org/projects/subsy/badge/?version=latest)](
+    https://subsy.readthedocs.io/en/latest)
+[![release](
+    https://img.shields.io/pypi/v/subsy.svg)](
+    https://pypi.python.org/pypi/subsy)
+[![license](
+    https://img.shields.io/badge/License-MIT-green.svg)](
+    https://github.com/John-Hennig/Subsy/blob/main/license.txt)
+
+----
+
+# CI/CD
+
+I published this library mostly to use as a demo project for continuous
+integration, for me to learn how to set up and configure the various CI
+services by different providers. For the small, pure-Python package that
+this is, such effort is certainly overkill. But the configuration files
+would not be all that different for big projects. And the limitations
+of the CI services would be the same. The goal for each of them: Make
+sure the tests pass for all supported Python versions and on the three
+major platforms: Linux, Windows, macOS.
+
 ![coverage](tests/coverage.svg?raw=true)
-[![documentation](https://readthedocs.org/projects/subsy/badge/?version=latest)](https://subsy.readthedocs.io/en/latest)
+[![Travis CI](
+    https://img.shields.io/travis/John-Hennig/Subsy?label=TravisCI)](
+    https://app.travis-ci.com/John-Hennig/Subsy)
+[![CircleCI](
+    https://img.shields.io/circleci/build/github/John-Hennig/Subsy?label=CircleCI)](
+    https://circleci.com/gh/John-Hennig/Subsy)

@@ -28,9 +28,14 @@ Subtitles can be loaded from and saved to these file formats:
 * WebVTT (`.vtt`)
 * SubViewer (`.sub`)
 
-[![license](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![release](https://img.shields.io/pypi/v/subsy.svg)](https://pypi.python.org/pypi/subsy)
-[![source](https://img.shields.io/github/stars/John-Hennig/Subsy?style=social)](https://github.com/John-Hennig/Subsy)
+The text encoding of input files is detected automatically.
+
+[![release](
+    https://img.shields.io/pypi/v/subsy.svg)](
+    https://pypi.python.org/pypi/subsy)
+[![license](
+    https://img.shields.io/badge/License-MIT-green.svg)](
+    https://github.com/John-Hennig/Subsy/blob/main/license.txt)
 
 ```{toctree}
 :hidden:
