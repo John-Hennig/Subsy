@@ -63,3 +63,6 @@ major platforms: Linux, Windows, macOS.
 [![GitHub](
     https://img.shields.io/github/workflow/status/John-Hennig/Subsy/Test%20commit?label=GitHub)](
     https://github.com/John-Hennig/Subsy/actions/workflows/test_commit.yml)
+[![Buddy](
+    https://app.buddy.works/jhen/subsy/pipelines/pipeline/351304/badge.svg?token=09080438c2a13e8c074ec45e5dc023682ae8c8e825ef8b6e8616aa8ee8ab2dfe)](
+    https://app.buddy.works/jhen/subsy/pipelines/pipeline/351304)

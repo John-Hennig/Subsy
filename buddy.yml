@@ -1,0 +1,24 @@
+﻿- pipeline: "Test commit"
+  on: "EVENT"
+  events:
+  - type: "PUSH"
+    refs:
+    - "refs/heads/main"
+  priority: "NORMAL"
+  fail_on_prepare_env_warning: true
+  actions:
+  - action: "Lint and test."
+    type: "BUILD"
+    working_directory: "/buddy/subsy"
+    docker_image_name: "library/python"
+    docker_image_tag: "latest"
+    execute_commands:
+    - "pip install .[test]"
+    - "flake8"
+    - "pytest"
+    cached_dirs:
+    - "/root/.cache/pip"
+    volume_mappings:
+    - "/:/buddy/subsy"
+    cache_base_image: true
+    shell: "BASH"
