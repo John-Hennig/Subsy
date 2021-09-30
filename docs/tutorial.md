@@ -1,9 +1,9 @@
 ﻿# Tutorial
 
-The subtitles file used in this tutorial can be downloaded [from this
-libraries source-code repo][reference], where they are part of the
-automated test suite. If we start the Python interpreter in the same
-folder as the downloaded file, those subtitles can be loaded like so:
+You can [download the subtitles file][reference] used in this tutorial
+from the library's source-code repository (where it is part of the
+automated test suite). If we start the Python interpreter in the same
+folder as the downloaded file, it can be loaded like so:
 ```python
 >>> import subsy
 >>> subtitles = subsy.load('reference.srt')
@@ -20,7 +20,7 @@ Subtitle(00:00:00.000 → 00:00:01.234: "Just a single line of text.")
 ```
 
 But it is a linked list. That is, it provides additional funtionality
-to get from one subtitle to the next one, or to the previous one.
+to go from one subtitle to the next one, or back to the previous one.
 ```python
 >>> subtitle = subtitle.next
 >>> subtitle
@@ -77,14 +77,14 @@ Changing one also changes the other.
 ['TEXT EXTENDING OVER', 'TWO LINES.']
 ```
 
-Text may contain markup (using the SubRip format of `.srt` files).
+Text may contain markup, of the SubRip flavor familiar from `.srt` files.
 ```python
 >>> subtitle = subtitles[16]
 >>> subtitle.text
 '<i>Two lines of text,</i>\n<i>separately in italics.</i>'
 ```
 
-We can get the plain text without the markup.
+Sometimes we want the plain text without the markup.
 ```python
 >>> subtitle.plain
 'Two lines of text,\nseparately in italics.'
@@ -98,6 +98,5 @@ of the subtitle.
 >>> len(subtitle.plain)
 41
 ```
-
 
 [reference]: https://github.com/John-Hennig/MPh/blob/main/tests/corpus/reference.srt

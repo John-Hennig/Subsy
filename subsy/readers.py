@@ -38,16 +38,16 @@ def detect_encoding(file):
     return encoding
 
 
-def from_aeidon(subtitles, markup):
+def from_aeidon(aeidon_subtitles, markup):
     """Convert subtitles from Aeidon's format to the internal one."""
-    internal = []
-    for sub in subtitles:
+    subtitles = []
+    for sub in aeidon_subtitles:
         subtitle = Subtitle()
         subtitle.text  = markup.convert(sub.main_text)
         subtitle.start = round(1000 * sub.start_seconds)
         subtitle.end   = round(1000 * sub.end_seconds)
-        internal.append(subtitle)
-    return internal
+        subtitles.append(subtitle)
+    return subtitles
 
 
 def read_srt(file, encoding):
