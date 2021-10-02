@@ -1,24 +1,99 @@
-﻿- pipeline: "Test commit"
+﻿# The configuration via the YAML file is documented here:
+#    https://buddy.works/docs/yaml
+# For the most part, we just need the "build" action:
+#    https://buddy.works/docs/yaml/yaml-actions/build-application
+
+- pipeline: "Test commit"
+
   on: "EVENT"
   events:
-  - type: "PUSH"
-    refs:
-    - "refs/heads/main"
+    - type: "PUSH"
+      refs:
+        - "refs/heads/main"
+
   priority: "NORMAL"
   fail_on_prepare_env_warning: true
+
   actions:
-  - action: "Lint and test."
-    type: "BUILD"
-    working_directory: "/buddy/subsy"
-    docker_image_name: "library/python"
-    docker_image_tag: "latest"
-    execute_commands:
-    - "pip install .[test]"
-    - "flake8"
-    - "pytest"
-    cached_dirs:
-    - "/root/.cache/pip"
-    volume_mappings:
-    - "/:/buddy/subsy"
-    cache_base_image: true
-    shell: "BASH"
+    - action: "Linux Python 3.6"
+      type: "BUILD"
+      working_directory: "/buddy/subsy"
+      docker_image_name: "library/python"
+      docker_image_tag: "3.6"
+      execute_commands:
+        - "pip install .[test]"
+        - "flake8"
+        - "pytest"
+      cached_dirs:
+        - "/root/.cache/pip"
+      volume_mappings:
+        - "/:/buddy/subsy"
+      cache_base_image: true
+
+    - action: "Linux Python 3.7"
+      type: "BUILD"
+      working_directory: "/buddy/subsy"
+      docker_image_name: "library/python"
+      docker_image_tag: "3.7"
+      execute_commands:
+        - "pip install .[test]"
+        - "flake8"
+        - "pytest"
+      cached_dirs:
+        - "/root/.cache/pip"
+      volume_mappings:
+        - "/:/buddy/subsy"
+      cache_base_image: true
+
+    - action: "Linux Python 3.8"
+      type: "BUILD"
+      working_directory: "/buddy/subsy"
+      docker_image_name: "library/python"
+      docker_image_tag: "3.8"
+      execute_commands:
+        - "pip install .[test]"
+        - "flake8"
+        - "pytest"
+      cached_dirs:
+        - "/root/.cache/pip"
+      volume_mappings:
+        - "/:/buddy/subsy"
+      cache_base_image: true
+
+    - action: "Linux Python 3.9"
+      type: "BUILD"
+      working_directory: "/buddy/subsy"
+      docker_image_name: "library/python"
+      docker_image_tag: "3.9"
+      execute_commands:
+        - "pip install .[test]"
+        - "flake8"
+        - "pytest"
+      cached_dirs:
+        - "/root/.cache/pip"
+      volume_mappings:
+        - "/:/buddy/subsy"
+      cache_base_image: true
+
+
+# To test on Windows, there is the "NATIVE_BUILD_WINDOWS" action.
+# That image doesn't have Python pre-installed, but it does have the
+# chocolatey package manager. So the setup should be something like the
+# one below. However, when running this, the chocolatey command seemed
+# to hang and the build had to be terminated manually.
+#    - action: "Windows Python 3.9"
+#      type: "NATIVE_BUILD_WINDOWS"
+#      working_directory: "C:/buddy/subsy"
+#      commands:
+#        - "choco install python --version 3.9.7"
+#        - "python --version"
+#        - "pip install .[test]"
+#        - "flake8"
+#        - "pytest"
+#      sync_paths:
+#        - pipeline_path: "/"
+#          vm_path: "c:/buddy"
+#          direction: "VM_TO_PIPELINE"
+#        - pipeline_path: "/"
+#          vm_path: "c:/buddy"
+#          direction: "PIPELINE_TO_VM"
