@@ -13,8 +13,6 @@ def test_init():
         Subtitles(subtitles='string')
     with pytest.raises(TypeError):
         Subtitles(subtitles=['string'])
-    with pytest.raises(TypeError):
-        Subtitles(file=1)
     source = {'file': 'test.srt'}
     subtitles = Subtitles(source=source)
     assert subtitles.source == source
