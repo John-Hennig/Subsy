@@ -31,8 +31,10 @@ class Subtitle:
     ```
     """
 
-    def __init__(self, lines=[], start=0, duration=1000,
+    def __init__(self, lines=None, start=0, duration=1000,
                  parent=None, index=None, next=None, previous=None):
+        if lines is None:
+            lines = []
         self.lines = lines
         """List of individual lines of the subtitle's text."""
         self.start = start
