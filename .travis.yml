@@ -1,10 +1,101 @@
-﻿language: python
-python:
-  - 3.6
-  - 3.7
-  - 3.8
-  - 3.9
-install:
-  - pip install .[test]
-script:
-  - pytest
+﻿# The configuration file uses the YAML syntax.
+# See: docs.travis-ci.com/user/build-config-yaml
+
+version: ~> 1.0
+# Among other things, having this version specification opts in to "build
+# config validation".
+# See: docs.travis-ci.com/user/build-config-validation
+
+jobs:
+  include:
+
+    # If we only tested on Linux, we could use a simpler build matrix.
+    # See: docs.travis-ci.com/user/languages/python
+    # However, because we also want to test on macOS, we have to add the
+    # individual jobs one by one.
+    # See: blog.travis-ci.com/2019-08-07-extensive-python-testing-on-travis-ci
+
+    - &Linux_job
+      name: Linux, Python 3.6
+      os: Linux
+      language: python
+      python: 3.6
+      install:
+        - pip install --upgrade pip
+        - pip install .[test]
+      script:
+        - flake8
+        - pytest
+
+    - <<: *Linux_job
+      name: Linux, Python 3.7
+      python: 3.7
+
+    - <<: *Linux_job
+      name: Linux, Python 3.8
+      python: 3.8
+
+    - <<: *Linux_job
+      name: Linux, Python 3.9
+      python: 3.9
+
+    # Python does not come pre-installed on the Windows images. But the
+    # package manager chocolatey is available, and we can use it to install
+    # the desired Python version on the test runner.
+    # See: community.chocolatey.org/packages/python#versionhistory
+
+    - &Windows_job
+      name: Windows, Python 3.6
+      os: windows
+      language: shell
+      env: PATH=/c/Python36:/c/Python36/Scripts:$PATH
+      before_install:
+        - choco install python --version 3.6.8
+      install:
+        - python -m pip install --upgrade pip
+        - pip install .[test]
+      script:
+        - flake8
+        - pytest
+
+    - <<: *Windows_job
+      name: Windows, Python 3.7
+      env: PATH=/c/Python37:/c/Python37/Scripts:$PATH
+      before_install:
+        - choco install python --version 3.7.9
+
+    - <<: *Windows_job
+      name: Windows, Python 3.8
+      env: PATH=/c/Python38:/c/Python38/Scripts:$PATH
+      before_install:
+        - choco install python --version 3.8.10
+
+    - <<: *Windows_job
+      name: Windows, Python 3.9
+      env: PATH=/c/Python39:/c/Python39/Scripts:$PATH
+      before_install:
+        - choco install python --version 3.9.7
+
+    # There is no (longer) a macOS image with Python 3.6 installed. See:
+    #    https://docs.travis-ci.com/user/reference/osx
+    #    https://gist.github.com/shaypal5/7fd766933fb265af6f71a88cb91dd08c
+
+    - &macOS_job
+      name: macOS, Python 3.7
+      os: osx
+      osx_image: xcode10.5
+      language: shell
+      install:
+        - pip3 install --upgrade pip
+        - pip3 install .[test]
+      script:
+        - flake8
+        - pytest
+
+    - <<: *macOS_job
+      name: macOS, Python 3.8
+      osx_image: xcode11.5
+
+    - <<: *macOS_job
+      name: macOS, Python 3.9
+      osx_image: xcode12.5
