@@ -59,6 +59,9 @@ platforms: Linux, Windows, macOS.
 [![LGTM](
     https://img.shields.io/lgtm/grade/python/github/John-Hennig/Subsy?label=LGTM)](
     https://lgtm.com/projects/g/John-Hennig/Subsy)
+[![Codacy](
+    https://img.shields.io/codacy/grade/271baf9c33714b88bcf95e915532a692?label=Codacy)](
+    https://www.codacy.com/gh/John-Hennig/Subsy)
 [![Travis CI](
     https://img.shields.io/travis/John-Hennig/Subsy?label=TravisCI)](
     https://app.travis-ci.com/John-Hennig/Subsy)
