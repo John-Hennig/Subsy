@@ -3,6 +3,7 @@
 /deploy/dist/
 /deploy/coverage/
 /deploy/coverage.sqlite
+coverage.xml
 /dist/
 **/__pycache__
 **/.pytest_cache
