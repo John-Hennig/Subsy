@@ -1,5 +1,10 @@
 ﻿# Releases
 
+## 0.9.2
+* [Published](https://pypi.org/project/subsy/0.9.2) on October 3, 2021.
+* Fixed some code smells.
+* Changed development status "beta".
+
 ## 0.9.1
 * [Published](https://pypi.org/project/subsy/0.9.1) on September 30, 2021.
 * Cosmetic changes to code and documentation.
