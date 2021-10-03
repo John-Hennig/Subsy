@@ -1,7 +1,7 @@
 ﻿# The configuration via the YAML file is documented here:
-#    https://buddy.works/docs/yaml
+#    buddy.works/docs/yaml
 # For the most part, we just need the "build" action:
-#    https://buddy.works/docs/yaml/yaml-actions/build-application
+#    buddy.works/docs/yaml/yaml-actions/build-application
 
 - pipeline: "Test commit"
 

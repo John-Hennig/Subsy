@@ -1,8 +1,8 @@
-﻿# We are using the "tweak" mentioned in the AppVeyoer documentation
+﻿# We are using the "tweak" mentioned in the AppVeyor documentation
 # that let's us select the OS image by assigning to the environment
-# variable named APPVEYOR_BUILD_WORKER_IMAGE.
+# variable APPVEYOR_BUILD_WORKER_IMAGE.
 # See: www.appveyor.com/docs/build-environment
-# This is done so we can pick the correct path to the Python interpreter,
+# This is done so we can set the correct path to the Python interpreter,
 # which varies among the operating systems. See:
 #   www.appveyor.com/docs/windows-images-software
 #   www.appveyor.com/docs/linux-images-software
@@ -10,42 +10,53 @@
 
 environment:
     matrix:
+
         - NAME: Windows_Python36
           APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
           FOLDER: Python36-x64
-        - NAME: Linux_Python36
-          APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
-          FOLDER: venv3.6
-        - NAME: macOS_Python36
-          APPVEYOR_BUILD_WORKER_IMAGE: macOS
-          FOLDER: venv3.6
 
         - NAME: Windows_Python37
           APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
           FOLDER: Python37-x64
-        - NAME: Linux_Python37
-          APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
-          FOLDER: venv3.7
-        - NAME: macOS_Python37
-          APPVEYOR_BUILD_WORKER_IMAGE: macOS
-          FOLDER: venv3.7
 
         - NAME: Windows_Python38
           APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
           FOLDER: Python38-x64
+
+        - NAME: Windows_Python39
+          APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
+          FOLDER: Python39-x64
+
+
+        - NAME: Linux_Python36
+          APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
+          FOLDER: venv3.6
+
+        - NAME: Linux_Python37
+          APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
+          FOLDER: venv3.7
+
         - NAME: Linux_Python38
           APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
           FOLDER: venv3.8
+
+        - NAME: Linux_Python39
+          APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
+          FOLDER: venv3.9
+
+
+        - NAME: macOS_Python36
+          APPVEYOR_BUILD_WORKER_IMAGE: macOS
+          FOLDER: venv3.6
+
+        - NAME: macOS_Python37
+          APPVEYOR_BUILD_WORKER_IMAGE: macOS
+          FOLDER: venv3.7
+
         - NAME: macOS_Python38
           APPVEYOR_BUILD_WORKER_IMAGE: macOS
           FOLDER: venv3.8
 
-        - NAME: Windows_Python39
-          APPVEYOR_BUILD_WORKER_IMAGE: Visual Studio 2019
-          FOLDER: Python36-x64
-        - NAME: Linux_Python39
-          APPVEYOR_BUILD_WORKER_IMAGE: Ubuntu
-          FOLDER: venv3.9
         - NAME: macOS_Python39
           APPVEYOR_BUILD_WORKER_IMAGE: macOS
           FOLDER: venv3.9
@@ -65,5 +76,6 @@ test_script:
     - cmd: "C:\\%FOLDER%\\python.exe -m pytest"
     - sh: $HOME/$FOLDER/bin/python -m pytest
 
+# We neither build nor deploy, we only test.
 build: off
 deploy: off

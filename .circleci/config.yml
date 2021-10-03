@@ -1,5 +1,5 @@
 # The configuration file is written in YAML.
-# See: https://circleci.com/docs/2.0/writing-yaml
+# See: circleci.com/docs/2.0/writing-yaml
 
 version: 2.1
 # Use the (latest) 2.1 version of CircleCI pipeline process engine.
@@ -36,25 +36,24 @@ jobs:
             # See: circleci.com/developer/images/image/cimg/python
         steps: &test_steps
         # With the environment specified, we can now run the job step by step.
+        # The first step is always to check out the code from the GitHub repo.
         # We also save everything we define here in a template, just so we
         # don't have to repeat ourselves further down when we want to run the
         # same steps in the other environments.
         # See: circleci.com/docs/2.0/writing-yaml/#anchors-and-aliases
           - checkout
-          # Check out the code explicitly as the first step.
           - run:
               name: Update pip.
               command: pip install --upgrade pip
-          # Use latest pip version when building/installing the package.
           - run:
               name: Install package.
               command: pip install .[test]
-          # Install our package plus extra dependencies needed for testing.
+          - run:
+              name: Lint code.
+              command: flake8
           - run:
               name: Run tests.
               command: pytest
-          # And finally run the tests.
-
 
     Linux_Python37:
     # This job does the same as the first one, only with Python 3.7.
