@@ -40,7 +40,7 @@ def test_iter():
     subtitle2 = Subtitle(['line1', 'line2'])
     subtitles = Subtitles([subtitle1, subtitle2])
     n = 0
-    for subtitle in subtitles:
+    for _ in subtitles:
         n += 1
     assert n == 2
 
