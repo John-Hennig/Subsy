@@ -56,6 +56,9 @@ platforms: Linux, Windows, macOS.
 [![codecov](
     https://codecov.io/gh/John-Hennig/Subsy/branch/main/graph/badge.svg?token=V5B66MCAFF)](
     https://codecov.io/gh/John-Hennig/Subsy)
+[![LGTM](
+    https://img.shields.io/lgtm/grade/python/github/John-Hennig/Subsy?label=LGTM)](
+    https://lgtm.com/projects/g/John-Hennig/Subsy)
 [![Travis CI](
     https://img.shields.io/travis/John-Hennig/Subsy?label=TravisCI)](
     https://app.travis-ci.com/John-Hennig/Subsy)
