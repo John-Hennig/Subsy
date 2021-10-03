@@ -53,18 +53,12 @@ of the CI services would be the same. The goal for each of them: Make
 sure the tests pass for all supported Python versions on all three
 platforms: Linux, Windows, macOS.
 
-[![codecov](
-    https://codecov.io/gh/John-Hennig/Subsy/branch/main/graph/badge.svg?token=V5B66MCAFF)](
-    https://codecov.io/gh/John-Hennig/Subsy)
-[![LGTM](
-    https://img.shields.io/lgtm/grade/python/github/John-Hennig/Subsy?label=LGTM)](
-    https://lgtm.com/projects/g/John-Hennig/Subsy)
-[![Codacy](
-    https://img.shields.io/codacy/grade/271baf9c33714b88bcf95e915532a692?label=Codacy)](
-    https://www.codacy.com/gh/John-Hennig/Subsy)
 [![Travis CI](
     https://img.shields.io/travis/John-Hennig/Subsy?label=TravisCI)](
     https://app.travis-ci.com/John-Hennig/Subsy)
+[![AppVeyor](
+    https://img.shields.io/appveyor/build/John-Hennig/Subsy?label=AppVeyor)](
+    https://ci.appveyor.com/project/John-Hennig/subsy)
 [![CircleCI](
     https://img.shields.io/circleci/build/github/John-Hennig/Subsy?label=CircleCI)](
     https://circleci.com/gh/John-Hennig/Subsy)
@@ -74,6 +68,13 @@ platforms: Linux, Windows, macOS.
 [![Buddy](
     https://app.buddy.works/jhen/subsy/pipelines/pipeline/351304/badge.svg?token=09080438c2a13e8c074ec45e5dc023682ae8c8e825ef8b6e8616aa8ee8ab2dfe)](
     https://app.buddy.works/jhen/subsy/pipelines/pipeline/351304)
-[![Buddy](
-    https://img.shields.io/appveyor/build/John-Hennig/Subsy?label=AppVeyor)](
-    https://ci.appveyor.com/project/John-Hennig/subsy)
+
+[![codecov](
+    https://codecov.io/gh/John-Hennig/Subsy/branch/main/graph/badge.svg?token=V5B66MCAFF)](
+    https://codecov.io/gh/John-Hennig/Subsy)
+[![LGTM](
+    https://img.shields.io/lgtm/grade/python/github/John-Hennig/Subsy?label=LGTM)](
+    https://lgtm.com/projects/g/John-Hennig/Subsy)
+[![Codacy](
+    https://img.shields.io/codacy/grade/271baf9c33714b88bcf95e915532a692?label=Codacy)](
+    https://www.codacy.com/gh/John-Hennig/Subsy)
