@@ -50,10 +50,12 @@ services by different providers. For the small, pure-Python package that
 this is, such effort is certainly overkill. But the configuration files
 would not be all that different for big projects. And the limitations
 of the CI services would be the same. The goal for each of them: Make
-sure the tests pass for all supported Python versions and on the three
-major platforms: Linux, Windows, macOS.
+sure the tests pass for all supported Python versions on all three
+platforms: Linux, Windows, macOS.
 
-![coverage](tests/coverage.svg?raw=true)
+[![codecov](
+    https://codecov.io/gh/John-Hennig/Subsy/branch/main/graph/badge.svg?token=V5B66MCAFF)](
+    https://codecov.io/gh/John-Hennig/Subsy)
 [![Travis CI](
     https://img.shields.io/travis/John-Hennig/Subsy?label=TravisCI)](
     https://app.travis-ci.com/John-Hennig/Subsy)

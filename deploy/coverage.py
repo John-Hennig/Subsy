@@ -1,4 +1,4 @@
-﻿"""Measures code coverage by test suite."""
+﻿"""Measures code coverage and renders the coverage report locally."""
 
 from subprocess import run
 from pathlib import Path
@@ -13,7 +13,3 @@ run(['pytest', '--cov'], cwd=root)
 print('Exporting coverage report.')
 folder = (here/'coverage').relative_to(root)
 run(['coverage', 'html', f'--directory={folder}'], cwd=root)
-
-print('Rendering coverage badge.')
-badge = root/'tests'/file.with_suffix('.svg').name
-run(['coverage-badge', '-f', '-o', str(badge)], cwd=root)
