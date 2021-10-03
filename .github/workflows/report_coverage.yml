@@ -1,0 +1,26 @@
+﻿name: Report coverage
+
+on: [push, pull_request]
+
+jobs:
+
+    coverage:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Check out code.
+              uses: actions/checkout@v2
+            - name: Set up Python.
+              uses: actions/setup-python@v2
+              with:
+                  python-version: 3.x
+            - name: Update package manager.
+              run: pip install --upgrade pip
+            - name: Install package and dependencies.
+              run: pip install .[test]
+            - name: Measure code coverage.
+              run: pytest --cov
+            - name: Upload coverage report.
+              uses: codecov/codecov-action@v2
+              with:
+                files: deploy/coverage.sqlite
+                fail_ci_if_error: true
