@@ -30,14 +30,23 @@ jobs:
               with:
                   python-version: ${{ matrix.python-version }}
 
-            - name: Update pip.
-              run: pip install --upgrade pip
-
             - name: Install package.
-              run: pip install .[test]
+              run: |
+                  pip install --upgrade pip
+                  pip install .[test,doc]
+                  pip install flit
 
             - name: Lint code.
               run: flake8
 
             - name: Run tests.
               run: pytest
+
+            - name: Build package.
+              run: python deploy/build.py
+
+            - name: Render docs.
+              run: python deploy/render.py
+
+            - name: Clean repo.
+              run: python deploy/clean.py
