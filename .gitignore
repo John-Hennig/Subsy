@@ -2,7 +2,7 @@
 /deploy/docs/
 /deploy/dist/
 /deploy/coverage/
-/deploy/coverage.sqlite
+.coverage
 coverage.xml
 /dist/
 **/__pycache__
