@@ -5,12 +5,20 @@
 
 - pipeline: "Test commit"
 
-  on: "EVENT"
-  events:
-    - type: "PUSH"
-      refs:
-        - "refs/heads/main"
+  # To have the pipeline run on every push to the "main" branch, we would use
+  # the following configuration.
+  # on: "EVENT"
+  # events:
+  #   - type: "PUSH"
+  #     refs:
+  #       - "refs/heads/main"
 
+  # However, we cannot disable pipelines manually in Buddy's web UI. All
+  # configuration is either done in this YAML file, or in the web UI without
+  # any YAML at all. So it is currently set to manual trigger because we don't
+  # have to run all CI services on every commit of this demo project.
+  on: "CLICK"
+  
   priority: "NORMAL"
   fail_on_prepare_env_warning: true
 
