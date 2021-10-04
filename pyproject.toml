@@ -6,7 +6,7 @@ build-backend = "flit_core.buildapi"
 name = 'subsy'
 authors = [{name='John Hennig'}]
 license = {file='license.txt'}
-keywords = ['subtitles', 'SubRip', 'srt']
+keywords = ['subtitles', '.srt', '.ass', '.ssa', '.vtt', '.sub']
 classifiers = [
     'Development Status :: 4 - Beta',
     'Programming Language :: Python :: 3',
