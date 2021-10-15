@@ -35,11 +35,11 @@ jobs:
             - name: Install package.
               run: |
                   pip install --upgrade pip
-                  pip install .[test,doc]
+                  pip install .[test,docs]
                   pip install flit
 
             - name: Lint code.
-              run: flake8
+              run: pflake8
 
             - name: Run tests.
               run: pytest

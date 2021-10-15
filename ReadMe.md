@@ -57,8 +57,8 @@ platforms: Linux, Windows, macOS.
     https://img.shields.io/travis/john-hen/Subsy?label=TravisCI)](
     https://app.travis-ci.com/john-hen/Subsy)
 [![AppVeyor](
-    https://img.shields.io/appveyor/build/john-hen/Subsy?label=AppVeyor)](
-    https://ci.appveyor.com/project/john-hen/subsy)
+    https://img.shields.io/appveyor/build/john-hennig/Subsy?label=AppVeyor)](
+    https://ci.appveyor.com/project/john-hennig/subsy)
 [![CircleCI](
     https://img.shields.io/circleci/build/github/john-hen/Subsy?label=CircleCI)](
     https://circleci.com/gh/john-hen/Subsy)

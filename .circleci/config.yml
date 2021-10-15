@@ -50,7 +50,7 @@ jobs:
               command: pip install .[test]
           - run:
               name: Lint code.
-              command: flake8
+              command: pflake8
           - run:
               name: Run tests.
               command: pytest

@@ -30,7 +30,7 @@
       docker_image_tag: "3.6"
       execute_commands:
         - "pip install .[test]"
-        - "flake8"
+        - "pflake8"
         - "pytest"
       cached_dirs:
         - "/root/.cache/pip"
@@ -45,7 +45,7 @@
       docker_image_tag: "3.7"
       execute_commands:
         - "pip install .[test]"
-        - "flake8"
+        - "pflake8"
         - "pytest"
       cached_dirs:
         - "/root/.cache/pip"
@@ -60,7 +60,7 @@
       docker_image_tag: "3.8"
       execute_commands:
         - "pip install .[test]"
-        - "flake8"
+        - "pflake8"
         - "pytest"
       cached_dirs:
         - "/root/.cache/pip"
@@ -75,7 +75,7 @@
       docker_image_tag: "3.9"
       execute_commands:
         - "pip install .[test]"
-        - "flake8"
+        - "pflake8"
         - "pytest"
       cached_dirs:
         - "/root/.cache/pip"
@@ -96,7 +96,7 @@
 #        - "choco install python --version 3.9.7"
 #        - "python --version"
 #        - "pip install .[test]"
-#        - "flake8"
+#        - "pflake8"
 #        - "pytest"
 #      sync_paths:
 #        - pipeline_path: "/"

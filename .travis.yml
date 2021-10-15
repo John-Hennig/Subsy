@@ -24,7 +24,7 @@ jobs:
         - pip install --upgrade pip
         - pip install .[test]
       script:
-        - flake8
+        - pflake8
         - pytest
 
     - <<: *Linux_job
@@ -55,7 +55,7 @@ jobs:
         - python -m pip install --upgrade pip
         - pip install .[test]
       script:
-        - flake8
+        - pflake8
         - pytest
 
     - <<: *Windows_job
@@ -89,7 +89,7 @@ jobs:
         - pip3 install --upgrade pip
         - pip3 install .[test]
       script:
-        - flake8
+        - pflake8
         - pytest
 
     - <<: *macOS_job

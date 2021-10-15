@@ -69,8 +69,8 @@ install:
     - sh: $HOME/$FOLDER/bin/python -m pip install .[test]
 
 before_test:
-    - cmd: "C:\\%FOLDER%\\python.exe -m flake8"
-    - sh: $HOME/$FOLDER/bin/python -m flake8
+    - cmd: "C:\\%FOLDER%\\python.exe -m pflake8"
+    - sh: $HOME/$FOLDER/bin/python -m pflake8
 
 test_script:
     - cmd: "C:\\%FOLDER%\\python.exe -m pytest"

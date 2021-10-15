@@ -1,6 +1,4 @@
-[build-system]
-requires = ["flit_core>=3.2,<4"]
-build-backend = "flit_core.buildapi"
+# Meta information: PyPI and pip
 
 [project]
 name = 'subsy'
@@ -21,9 +19,73 @@ dependencies = ['srt3', 'aeidon', 'chardet']
 dynamic = ['version', 'description']
 
 [project.optional-dependencies]
-doc = ['Sphinx', 'Furo', 'MyST-parser', 'CommonMark']
-test = ['pyTest', 'pyTest-cov', 'flake8']
+docs = ['Sphinx', 'Furo', 'MyST-parser', 'CommonMark']
+test = ['pyTest', 'pyTest-cov', 'flake8', 'pyproject-flake8']
 
 [project.urls]
 Documentation = 'https://subsy.readthedocs.io'
 Source = 'https://github.com/john-hen/subsy'
+
+
+# Wheel builder: flit
+
+[build-system]
+requires = ["flit_core>=3.2,<4"]
+build-backend = "flit_core.buildapi"
+
+
+# Code linter: flake8 (via pyproject-flake8)
+
+[tool.flake8]
+exclude = [
+    '.git',
+    '.tox',
+    '__pycache__',
+    'develop',
+]
+ignore = [
+    'E127', 'E128',
+    'E201', 'E202',
+    'E221', 'E222',
+    'E226',
+    'E231',
+    'E241',
+    'E251',
+    'E261',
+    'E271', 'E272',
+    'E402',
+    'W503',
+]
+per-file-ignores = ['__init__.py:F401']
+
+
+# Test runner: pyTest
+
+[tool.pytest.ini_options]
+addopts = '--verbose'
+testpaths = ['tests']
+
+
+# Code coverage: Coverage.py
+
+[tool.coverage.run]
+source = ['subsy/']
+relative_files = true
+
+[tool.coverage.report]
+exclude_lines = ['pragma: no cover']
+
+
+# Environment tests: Tox.
+
+[tool.tox]
+legacy_tox_ini = """
+[tox]
+envlist = py36,py37,py38,py39,py310
+isolated_build = True
+
+[testenv]
+commands =
+    pip install .[test]
+    pytest
+"""
