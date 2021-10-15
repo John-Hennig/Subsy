@@ -16,7 +16,6 @@ supports basic text formating, but no advanced features such as cross
 references.
 """
 
-
 ########################################
 # Dependencies                         #
 ########################################
@@ -30,12 +29,12 @@ extensions = [
     'myst_parser',                     # Accept Markdown as input.
     'sphinx.ext.autodoc',              # Get documentation from doc-strings.
     'sphinx.ext.autosummary',          # Create summaries automatically.
-    'sphinx.ext.viewcode',             # Add links to highlighted source code.
+    'sphinx.ext.viewcode',             # Include highlighted source code.
 ]
 
 # Add the project folder to the module search path.
-main = Path(__file__).absolute().parent.parent
-sys.path.insert(0, str(main))
+root = Path(__file__).absolute().parent.parent
+sys.path.insert(0, str(root))
 
 # Mock external dependencies so they are not required at build time.
 sys.modules['srt'] = Mock()
@@ -48,39 +47,20 @@ from subsy import meta
 
 
 ########################################
-# Doc-strings                          #
-########################################
-
-def docstring(app, what, name, obj, options, lines):
-    """Converts doc-strings from (CommonMark) Markdown to reStructuredText."""
-    md  = '\n'.join(lines)
-    ast = commonmark.Parser().parse(md)
-    rst = commonmark.ReStructuredTextRenderer().render(ast)
-    lines.clear()
-    lines += rst.splitlines()
-
-
-def setup(app):
-    """Sets up customized text processing."""
-    app.connect('autodoc-process-docstring', docstring)
-
-
-########################################
 # Configuration                        #
 ########################################
 
 # Meta information
 project   = meta.title
-version   = meta.version
-release   = meta.version
-date      = meta.date
 author    = meta.author
 copyright = meta.copyright
-license   = meta.license
+version   = meta.version
+release   = version
 
-# Logo
-html_logo    = 'images/icon-96px.png'  # documentation logo
-html_favicon = 'images/icon-256px.png' # browser icon
+# Web site
+html_title   = f'{project} {version}'  # document title
+html_logo    = 'images/logo-96px.png'  # project logo
+html_favicon = 'images/logo-256px.png' # browser icon
 
 # Source parsing
 master_doc = 'index'                   # start page
@@ -104,6 +84,23 @@ html_show_sphinx     = False           # Show Sphinx blurb in footer?
 html_theme          = 'furo'           # custom theme with light and dark mode
 pygments_style      = 'friendly'       # syntax highlight style in light mode
 pygments_dark_style = 'stata-dark'     # syntax highlight style in dark mode
-templates_path      = ['templates']    # style template overrides
 html_static_path    = ['style']        # folders to include in output
 html_css_files      = ['custom.css']   # extra style files to apply
+
+
+########################################
+# Doc-strings                          #
+########################################
+
+def docstring(app, what, name, obj, options, lines):
+    """Converts doc-strings from (CommonMark) Markdown to reStructuredText."""
+    md  = '\n'.join(lines)
+    ast = commonmark.Parser().parse(md)
+    rst = commonmark.ReStructuredTextRenderer().render(ast)
+    lines.clear()
+    lines += rst.splitlines()
+
+
+def setup(app):
+    """Sets up customized text processing."""
+    app.connect('autodoc-process-docstring', docstring)
