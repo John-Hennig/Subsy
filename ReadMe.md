@@ -38,7 +38,7 @@ The text encoding of input files is detected automatically.
     https://pypi.python.org/pypi/subsy)
 [![license](
     https://img.shields.io/badge/License-MIT-green.svg)](
-    https://github.com/John-Hennig/Subsy/blob/main/license.txt)
+    https://github.com/john-hen/Subsy/blob/main/license.txt)
 
 ----
 
@@ -54,27 +54,27 @@ sure the tests pass for all supported Python versions on all three
 platforms: Linux, Windows, macOS.
 
 [![Travis CI](
-    https://img.shields.io/travis/John-Hennig/Subsy?label=TravisCI)](
-    https://app.travis-ci.com/John-Hennig/Subsy)
+    https://img.shields.io/travis/john-hen/Subsy?label=TravisCI)](
+    https://app.travis-ci.com/john-hen/Subsy)
 [![AppVeyor](
-    https://img.shields.io/appveyor/build/John-Hennig/Subsy?label=AppVeyor)](
-    https://ci.appveyor.com/project/John-Hennig/subsy)
+    https://img.shields.io/appveyor/build/john-hen/Subsy?label=AppVeyor)](
+    https://ci.appveyor.com/project/john-hen/subsy)
 [![CircleCI](
-    https://img.shields.io/circleci/build/github/John-Hennig/Subsy?label=CircleCI)](
-    https://circleci.com/gh/John-Hennig/Subsy)
+    https://img.shields.io/circleci/build/github/john-hen/Subsy?label=CircleCI)](
+    https://circleci.com/gh/john-hen/Subsy)
 [![GitHub](
-    https://img.shields.io/github/workflow/status/John-Hennig/Subsy/Test%20commit?label=GitHub)](
-    https://github.com/John-Hennig/Subsy/actions/workflows/test_commit.yml)
+    https://img.shields.io/github/workflow/status/john-hen/Subsy/Test%20commit?label=GitHub)](
+    https://github.com/john-hen/Subsy/actions/workflows/test_commit.yml)
 [![Buddy](
     https://app.buddy.works/jhen/subsy/pipelines/pipeline/351696/badge.svg?token=09080438c2a13e8c074ec45e5dc023682ae8c8e825ef8b6e8616aa8ee8ab2dfe)](
     https://app.buddy.works/jhen/subsy/pipelines/pipeline/351696)
 
 [![codecov](
-    https://codecov.io/gh/John-Hennig/Subsy/branch/main/graph/badge.svg?token=V5B66MCAFF)](
-    https://codecov.io/gh/John-Hennig/Subsy)
+    https://codecov.io/gh/john-hen/Subsy/branch/main/graph/badge.svg?token=V5B66MCAFF)](
+    https://codecov.io/gh/john-hen/Subsy)
 [![LGTM](
-    https://img.shields.io/lgtm/grade/python/github/John-Hennig/Subsy?label=LGTM)](
-    https://lgtm.com/projects/g/John-Hennig/Subsy)
+    https://img.shields.io/lgtm/grade/python/github/john-hen/Subsy?label=LGTM)](
+    https://lgtm.com/projects/g/john-hen/Subsy)
 [![Codacy](
     https://img.shields.io/codacy/grade/271baf9c33714b88bcf95e915532a692?label=Codacy)](
-    https://www.codacy.com/gh/John-Hennig/Subsy)
+    https://www.codacy.com/gh/john-hen/Subsy)

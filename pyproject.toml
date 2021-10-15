@@ -26,4 +26,4 @@ test = ['pyTest', 'pyTest-cov', 'flake8']
 
 [project.urls]
 Documentation = 'https://subsy.readthedocs.io'
-Source = 'https://github.com/John-Hennig/subsy'
+Source = 'https://github.com/john-hen/subsy'

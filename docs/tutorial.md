@@ -99,4 +99,4 @@ of the subtitle.
 41
 ```
 
-[reference]: https://github.com/John-Hennig/MPh/blob/main/tests/corpus/reference.srt
+[reference]: https://github.com/john-henn/Subsy/blob/main/tests/corpus/reference.srt

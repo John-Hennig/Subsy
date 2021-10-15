@@ -35,7 +35,7 @@ The text encoding of input files is detected automatically.
     https://pypi.python.org/pypi/subsy)
 [![license](
     https://img.shields.io/badge/License-MIT-green.svg)](
-    https://github.com/John-Hennig/Subsy/blob/main/license.txt)
+    https://github.com/john-hen/Subsy/blob/main/license.txt)
 
 ```{toctree}
 :hidden:
