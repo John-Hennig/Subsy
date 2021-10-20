@@ -1,6 +1,5 @@
 ﻿"""Tests the `readers` module."""
 
-import parent # noqa F401
 from subsy import readers
 import fixtures
 import pytest

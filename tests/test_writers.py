@@ -1,6 +1,5 @@
 ﻿"""Tests the `writers` module."""
 
-import parent # noqa F401
 from subsy import writers
 import fixtures
 import pytest

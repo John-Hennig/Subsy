@@ -1,6 +1,5 @@
 ﻿"""Tests the `meta` module."""
 
-import parent # noqa F401
 from subsy import meta
 import re
 

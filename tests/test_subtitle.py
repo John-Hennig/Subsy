@@ -1,6 +1,5 @@
 ﻿"""Tests the `subtitle` module."""
 
-import parent # noqa F401
 from subsy import Subtitle
 
 

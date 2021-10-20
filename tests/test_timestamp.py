@@ -1,6 +1,5 @@
 ﻿"""Tests the `timestamp` module."""
 
-import parent # noqa F401
 from subsy import timestamp
 import pytest
 
