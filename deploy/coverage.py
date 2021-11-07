@@ -1,4 +1,4 @@
-﻿"""Measures code coverage and renders the coverage report locally."""
+﻿"""Measures code coverage by test suite."""
 
 from subprocess import run
 from pathlib import Path
@@ -8,7 +8,7 @@ root = here.parent
 file = here/'coverage.sqlite'
 
 print('Running test suite.')
-run(['pytest', '--cov'], cwd=root)
+run(['python', '-m', 'pytest', '--cov'], cwd=root)
 
 print('Exporting coverage report.')
 folder = (here/'coverage').relative_to(root)
