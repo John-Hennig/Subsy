@@ -30,12 +30,15 @@ Subtitles can be loaded from and saved to these file formats:
 
 The text encoding of input files is detected automatically.
 
-[![release](
-    https://img.shields.io/pypi/v/subsy.svg)](
-    https://pypi.python.org/pypi/subsy)
 [![license](
-    https://img.shields.io/badge/License-MIT-green.svg)](
+    https://img.shields.io/badge/License-MIT-green.svg?label=license)](
     https://github.com/john-hen/Subsy/blob/main/license.txt)
+[![release](
+    https://img.shields.io/pypi/v/subsy.svg?label=PyPI)](
+    https://pypi.python.org/pypi/subsy)
+[![source](
+    https://img.shields.io/github/stars/john-hen/Subsy?label=GitHub&style=social)](
+    https://github.com/john-hen/Subsy)
 
 ```{toctree}
 :hidden:

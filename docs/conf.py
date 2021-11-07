@@ -11,7 +11,7 @@ The rendered HTML then ends up in the `output` folder, wherein
 The documentation source comprises the `.md` files here, of which
 `index.md` maps to the start page, as well as the doc-strings in the
 package's source code for the API documentation. The Markdown parser
-for `.md` files is MyST. For doc-strings it is CommonMark, which
+for `.md` files is MyST. For doc-strings it is Commonmark, which
 supports basic text formating, but no advanced features such as cross
 references.
 """
@@ -29,7 +29,7 @@ extensions = [
     'myst_parser',                     # Accept Markdown as input.
     'sphinx.ext.autodoc',              # Get documentation from doc-strings.
     'sphinx.ext.autosummary',          # Create summaries automatically.
-    'sphinx.ext.viewcode',             # Include highlighted source code.
+    'sphinx.ext.viewcode',             # Show source code.
 ]
 
 # Add the project folder to the module search path.
@@ -81,7 +81,7 @@ html_show_copyright  = False           # Show copyright notice in footer?
 html_show_sphinx     = False           # Show Sphinx blurb in footer?
 
 # Rendering style
-html_theme          = 'furo'           # custom theme with light and dark mode
+html_theme          = 'furo'           # Furo theme, with light and dark mode
 pygments_style      = 'friendly'       # syntax highlight style in light mode
 pygments_dark_style = 'stata-dark'     # syntax highlight style in dark mode
 html_static_path    = ['style']        # folders to include in output
@@ -93,7 +93,7 @@ html_css_files      = ['custom.css']   # extra style files to apply
 ########################################
 
 def docstring(app, what, name, obj, options, lines):
-    """Converts doc-strings from (CommonMark) Markdown to reStructuredText."""
+    """Converts doc-strings from (Commonmark) Markdown to reStructuredText."""
     md  = '\n'.join(lines)
     ast = commonmark.Parser().parse(md)
     rst = commonmark.ReStructuredTextRenderer().render(ast)

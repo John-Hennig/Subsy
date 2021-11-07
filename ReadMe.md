@@ -30,28 +30,38 @@ Subtitles can be loaded from and saved to these file formats:
 
 The text encoding of input files is detected automatically.
 
+[![release](
+    https://img.shields.io/pypi/v/subsy.svg?label=release)](
+    https://pypi.python.org/pypi/subsy)
 [![documentation](
     https://readthedocs.org/projects/subsy/badge/?version=latest)](
     https://subsy.readthedocs.io/en/latest)
-[![release](
-    https://img.shields.io/pypi/v/subsy.svg)](
-    https://pypi.python.org/pypi/subsy)
-[![license](
-    https://img.shields.io/badge/License-MIT-green.svg)](
-    https://github.com/john-hen/Subsy/blob/main/license.txt)
+
 
 ----
 
-# Continuous integration
+
+## Continuous integration
 
 I published this library mostly to use as a demo project for continuous
 integration, for me to learn how to set up and configure the various CI
 services by different providers. For the small, pure-Python package that
 this is, such effort is certainly overkill. But the configuration files
-would not be all that different for big projects. And the limitations
-of the CI services would be the same. The goal for each of them: Make
-sure the tests pass for all supported Python versions on all three
-platforms: Linux, Windows, macOS.
+would not be all that different for bigger projects. And the limitations
+of the CI services would be the same.
+
+The goal for each of them: Make sure the tests pass for all supported
+Python versions on all three platforms: Linux, Windows, macOS. GitHub
+Actions was by far the easiest to set up. CircleCI is similarly easy,
+and unlike any other provider offers terminal access to the test runner
+for debugging purposes, but does not support macOS in the free plan.
+Travis CI and AppVeyor are the veterans, and it shows. The configuration
+syntax is clunky, less streamlined and flexible than the competition's.
+Buddy is easy to use, but lacks features and macOS support. I wanted to
+test Azure Pipelines, but, of late, Microsoft requires application via
+email for the free plan, and I couldn't be bothered. For projects
+already on GitHub, there is little reason to use anything but GitHub
+Actions.
 
 [![Travis CI](
     https://img.shields.io/travis/john-hen/Subsy?label=TravisCI)](
