@@ -76,8 +76,8 @@ Actions.
     https://img.shields.io/github/actions/workflow/status/john-hen/Subsy/test_commit.yml?branch=main&label=GitHub)](
     https://github.com/john-hen/Subsy/actions/workflows/test_commit.yml)
 [![Buddy](
-    https://app.buddy.works/jhen/subsy/pipelines/pipeline/351696/badge.svg?token=09080438c2a13e8c074ec45e5dc023682ae8c8e825ef8b6e8616aa8ee8ab2dfe)](
-    https://app.buddy.works/jhen/subsy/pipelines/pipeline/351696)
+    https://eu.buddy.works/jhen/subsy/pipelines/pipeline/180738/badge.svg?token=a4bb33447ad65098045696fa57da24b5e2fd9a203168eafe95cfaf5b3bb29862)](
+    https://eu.buddy.works/jhen/subsy/pipelines/pipeline/180738)
 
 [![codecov](
     https://codecov.io/gh/john-hen/Subsy/branch/main/graph/badge.svg?token=V5B66MCAFF)](
