@@ -82,9 +82,6 @@ Actions.
 [![codecov](
     https://codecov.io/gh/john-hen/Subsy/branch/main/graph/badge.svg?token=V5B66MCAFF)](
     https://codecov.io/gh/john-hen/Subsy)
-[![LGTM](
-    https://img.shields.io/lgtm/grade/python/github/john-hen/Subsy?label=LGTM)](
-    https://lgtm.com/projects/g/john-hen/Subsy)
 [![Codacy](
     https://img.shields.io/codacy/grade/271baf9c33714b88bcf95e915532a692?label=Codacy)](
     https://www.codacy.com/gh/john-hen/Subsy)
