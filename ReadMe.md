@@ -73,7 +73,7 @@ Actions.
     https://img.shields.io/circleci/build/github/john-hen/Subsy?label=CircleCI)](
     https://circleci.com/gh/john-hen/Subsy)
 [![GitHub](
-    https://img.shields.io/github/workflow/status/john-hen/Subsy/Test%20commit?label=GitHub)](
+    https://img.shields.io/github/actions/workflow/status/john-hen/Subsy/test_commit.yml?branch=main&label=GitHub)](
     https://github.com/john-hen/Subsy/actions/workflows/test_commit.yml)
 [![Buddy](
     https://app.buddy.works/jhen/subsy/pipelines/pipeline/351696/badge.svg?token=09080438c2a13e8c074ec45e5dc023682ae8c8e825ef8b6e8616aa8ee8ab2dfe)](
