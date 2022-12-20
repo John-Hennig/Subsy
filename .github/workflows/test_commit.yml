@@ -17,7 +17,7 @@ jobs:
         strategy:
             matrix:
                 os: [windows-latest, ubuntu-latest, macos-latest]
-                python-version: [3.6, 3.7, 3.8, 3.9, "3.10"]
+                python-version: [3.7, 3.8, 3.9, "3.10"]
                 # "3.10" must be in quotes so it's not interpreted as "3.1".
                 # See: https://dev.to/hugovk/the-python-3-1-problem-85g
                 # Better yet, always use quotes around versions.
